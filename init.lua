@@ -873,3 +873,11 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- Setting an Ansible regex for filetype detection
+vim.g.ansible_ftdetect_filename_regex = '\v(playbook|site|main|local|requirements|playbooks/.*?).ya?ml$'
+vim.filetype.add {
+  pattern = {
+    ['.*/playbooks/.+%.ya?ml'] = 'yaml.ansible',
+  },
+}
