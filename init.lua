@@ -562,6 +562,8 @@ require('lazy').setup({
           },
         },
 
+        solargraph = {},
+
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
