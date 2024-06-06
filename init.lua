@@ -551,6 +551,16 @@ require('lazy').setup({
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
         --
+        ansiblels = {
+          ansible = {
+            validation = {
+              enabled = true,
+              lint = {
+                enabled = true,
+              },
+            },
+          },
+        },
 
         lua_ls = {
           -- cmd = {...},
